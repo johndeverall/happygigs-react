@@ -2,7 +2,7 @@ import React from "react";
 
 function Header(){
     return (
-        <h1>Happy Gigs</h1>
+        <h1>Happy Gigs 2</h1>
     );
 }
 
