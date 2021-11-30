@@ -6,7 +6,7 @@ function Special(props){
             <ul>
                 <li>{props.description}</li>
                 <li>{props.startTime}</li>
-                <li>{props.endTime}</li>
+                <li>{props.finishTime}</li>
             </ul>
             <hr/>
         </React.Fragment>

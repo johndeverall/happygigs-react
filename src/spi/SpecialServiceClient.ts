@@ -1,6 +1,5 @@
 
 export const data = {
-    "data": {
         "specials": [
             {
                 "description": "House drinks from $7.50",
@@ -326,4 +325,5 @@ export const data = {
             }
         ]
     }
-}
+
+    export default data
