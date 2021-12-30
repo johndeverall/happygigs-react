@@ -1,0 +1,30 @@
+
+/*MOBILE VERSION*/
+@media screen and (orientation: portrait) {
+    #footer {
+        font-size: 2.4vw;
+        }
+        #footer {
+            width: 100%;
+           }
+}
+
+/*WEB VERSION*/
+@media screen  and (orientation: landscape) {
+    #footer {
+        font-size: 1vw;
+        }
+    }
+
+    #footer {
+        flex-shrink: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 1.6;
+        padding-top: 10px;
+      padding-bottom: 15px;
+      text-align: center;
+      color: #B397EA;
+    background-color: #4700CC;
+    }

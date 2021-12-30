@@ -1,0 +1,25 @@
+/*MOBILE VERSION*/
+@media screen and (orientation: portrait) {
+    #container {
+    width: 100%;
+    }
+}
+
+/*WEB VERSION*/
+@media screen  and (orientation: landscape) {
+    #container {
+    width: 50%; /* shrinks specials to middle for legibility */
+    margin-right: auto;
+    margin-left: auto;
+    }
+}
+
+
+/*CSS for main part displaying specials */
+#container {
+    background-color: #4700CC;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}

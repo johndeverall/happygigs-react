@@ -1,8 +1,12 @@
 import React from "react";
 
+import './Footer.css';
+
 function Footer(){
     return (
-        <p>Happy gigs is proudly made in New Zealand</p>
+        <div id="footer">
+  Happy Gigs is proudly made in New Zealand.
+</div>
     );
 }
 

@@ -1,0 +1,28 @@
+/*MOBILE VERSION*/
+@media screen and (orientation: portrait) {
+    .end-of-day {
+        font-size: 4vw;
+        }
+}
+
+
+/*WEB VERSION*/
+@media screen  and (orientation: landscape) {
+    .end-of-day {
+        font-size: 2vw;
+        }
+    }
+
+
+
+.end-of-day {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 40px;
+    flex-grow: 1;
+    text-align: center;
+    background-color: inherit;
+}
