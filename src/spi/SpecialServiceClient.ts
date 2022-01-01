@@ -366,5 +366,5 @@ export const data = {
         ]
     }
 
-    // export default data
-    export default getSpecials
+    export default data
+    // export default getSpecials

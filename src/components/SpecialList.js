@@ -1,18 +1,21 @@
 import React from "react";
 import Special from "./Special";
-import getSpecials from "../spi/SpecialServiceClient"
+import data from "../spi/SpecialServiceClient"
+import './SpecialList.css';
+import Heart from './heart.svg';
+import Pin from './pin.svg';
 
-async function SpecialList() {
+
+function SpecialList(){
     return (
         <React.Fragment>
 
-            <hr/>
-            {
-                (await getSpecials()).map(special =>
-                    <Special description={special.description} startTime={special.startTime}
-                             finishTime={special.finishTime} />
-                )}
-
+<div id="flex-container">
+            {data.specials
+                .map(special =>
+                <Special description={special.description} startTime={special.startTime} finishTime={special.finishTime} latitude={special.latitude} longitude={special.longitude} />
+            )}
+</div>
         </React.Fragment>
     );
 }

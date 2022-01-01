@@ -1,0 +1,57 @@
+/*MOBILE VERSION*/
+@media screen and (orientation: portrait) {
+    .mode {
+        width: 100%;
+        }
+        .mode label {
+            font-size: 7vw;
+            }
+}
+
+/*WEB VERSION*/
+@media screen  and (orientation: landscape) {
+    .mode label {
+        font-size: 3.5vw;
+        }
+    }
+
+/*Select mode of transportation - drive or walk */
+.select-transport {
+    flex-shrink: 0;
+}
+
+.mode {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  background-color: #4700CC;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.mode > * {
+    margin-left: 3%;
+  margin-right: 8%;
+}
+.mode input { /* This removes the check boxes */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.mode label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  color: #B397EA;
+  font-weight: bold;
+}
+
+.mode label:hover {
+  cursor: pointer;
+}
+.mode input:checked + label {
+    color: #fff;
+  border-bottom: 4px solid #FFF300;
+}
