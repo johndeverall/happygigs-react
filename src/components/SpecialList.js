@@ -1,21 +1,19 @@
 import React from "react";
 import Special from "./Special";
-import SpecialServiceClient from "../spi/SpecialServiceClient"
+import getSpecials from "../spi/SpecialServiceClient"
 
-
-
-function SpecialList(){
+async function SpecialList() {
     return (
         <React.Fragment>
 
             <hr/>
-            {SpecialServiceClient.specials.map(special =>
-                <Special description={special.description} startTime={special.startTime} finishTime={special.finishTime} latitude={special.latitude} longitude={special.longitude} />
-            )}
+            {
+                (await getSpecials()).map(special =>
+                    <Special description={special.description} startTime={special.startTime}
+                             finishTime={special.finishTime} />
+                )}
 
         </React.Fragment>
-
-
     );
 }
 

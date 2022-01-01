@@ -1,3 +1,43 @@
+import {gql, GraphQLClient} from 'graphql-request'
+
+type Special = {
+    "description": string,
+        "venue": {
+        "name": string,
+            "externalMapLink": string,
+            "venueWebsite": string,
+            "address": {
+                "streetName": string
+            }
+    },
+    "startTime": string,
+        "finishTime": string,
+        "timeToInMinutes": number
+}
+
+
+const dataQuery = () => gql`
+ query specials { 
+    specials(latitude: 2342343.32, longitude: 23423, searchTime: "2011-10-05T14:48:00.000Z", timeZone: "pacific/auckland") { 
+        description,
+        venue {
+          name
+          externalMapLink
+          venueWebsite
+          address {
+            streetName
+          }
+        },
+        startTime
+        finishTime
+        timeToInMinutes 
+    }
+ }`
+
+export const getSpecials = async (): Promise<Special[]> => {
+    const gqlClient = new GraphQLClient("gql.happygigs.co.nz")
+    return gqlClient.request(dataQuery())
+}
 
 export const data = {
         "specials": [
@@ -326,4 +366,5 @@ export const data = {
         ]
     }
 
-    export default data
+    // export default data
+    export default getSpecials
